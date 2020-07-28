@@ -28,12 +28,14 @@ az group list
 # create group
 az group create -l westeurope -n example2
 
+# Check storage account name
+az storage account check-name -n djgnsdg
+
 #Create storage account
 az storage account create-n adfdsl -g example2 -l westeurope --sku standard_LRS
 
 # Get storage account key
 az storage account keys list -n adfdsl
-
 
 
 
