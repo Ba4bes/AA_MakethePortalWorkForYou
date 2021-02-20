@@ -1,7 +1,7 @@
 # Sample script to create VM, Vnet, subnet and Public IP
 $Credential = Get-Credential
 
-$ResourceGroup = New-AzResourceGroup -Name "VirtualDay" -Location 'West Europe'
+$ResourceGroup = New-AzResourceGroup -Name "Automate-ALL-the-Things" -Location 'West Europe'
 
 $Subnet = New-AzVirtualNetworkSubnetConfig -AddressPrefix "10.10.10.0/24" -Name "subnet"
 

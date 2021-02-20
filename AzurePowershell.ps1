@@ -1,5 +1,5 @@
 # Connect account
-Connect-AzAccount -DeviceCode
+Connect-AzAccount
 
 # Set subscription
 Set-Azcontext $SubscriptionID
@@ -32,7 +32,7 @@ az group create -l westeurope -n example2
 az storage account check-name -n djgnsdg
 
 #Create storage account
-az storage account create-n adfdsl -g example2 -l westeurope --sku standard_LRS
+az storage account create -n adfdsl -g example2 -l westeurope --sku standard_LRS
 
 # Get storage account key
 az storage account keys list -n adfdsl
@@ -43,3 +43,4 @@ az storage account keys list -n adfdsl
 $ResourcegroupName = "Example3"
 New-AzResourceGroup -Name $ResourcegroupName -Location 'West Europe'
 New-AzResourceGroupDeployment -ResourceGroupName $ResourcegroupName -TemplateFile .\ARMtemplate.json -storageAccountPrefix "saff"
+
